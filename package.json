@@ -4,7 +4,8 @@
   "description": "nodejs 爬虫 -- 当当网",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "proxy": "node src/utils/proxy_ips_pool.js "
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,18 @@
   "homepage": "https://github.com/wingsico/dangdang-reptile#readme",
   "dependencies": {
     "async": "^2.6.1",
-    "async-promises": "^0.2.1",
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
-    "iconv-lite": "^0.4.24",
+    "mkdirp": "^0.5.1",
+    "mysql": "^2.16.0",
     "single-line-log": "^1.1.2",
+    "sleep": "^5.2.3",
     "superagent": "^4.0.0",
-    "superagent-charset": "^1.2.0"
+    "superagent-charset": "^1.2.0",
+    "superagent-proxy": "^2.0.0",
+    "superagent-retry-delay": "^2.2.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }
